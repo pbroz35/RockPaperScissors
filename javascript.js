@@ -39,7 +39,6 @@ function playerSelection()
     {
         console.log(`You've selected ${playerAnswer}!`);
         return playerAnswer;
-
     }
 
 }
@@ -85,6 +84,10 @@ function playRound(playerChoice,computerChoice)
             console.log('Player wins!');
             playerCount+=playerCount+1;
         }
+
+        //List current results
+        console.log(`Player: ${playerCount}\nComputer: ${computerCount}`);
+
     }
 
 //initiate counters
@@ -103,7 +106,6 @@ for (let i = 0; i <= rounds; i++)
 
     playRound(playerChoice,computerChoice);
 
-    
 }
 
 
