@@ -1,0 +1,13 @@
+
+*{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-size: xx-large;
+    font-weight: 1000;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+}
