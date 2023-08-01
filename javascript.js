@@ -44,41 +44,72 @@ function playerSelection()
 
 }
 
-function playRound(playerSelection, computerSelection) 
-{
-    if(playerSelection==computerSelection)
+function playRound(playerChoice,computerChoice)
     {
-        alert('tie!');
-    }    
+        if(playerChoice==computerChoice)
+        {
+            console.log('Tie!');
+        }
+        if(playerChoice=='rock' && computerChoice=='paper')
+        {
+            console.log('Computer wins!');
+            computerCount+=computerCount+1;
 
-}
+        }
+        if(playerChoice=='paper' && computerChoice=='rock')
+        {
+            console.log('Player wins!');
+            playerCount+=playerCount+1;
 
-let playerChoice=playerSelection();
-let computerChoice=getComputerChoice();
+        }
+        if(playerChoice=='rock' && computerChoice=='scissors')
+        {
+            console.log('Player wins!');
+            playerCount+=playerCount+1;
 
-playRound(playerChoice,computerChoice);
+        }
+        if(playerChoice=='scissors' && computerChoice=='rock')
+        {
+            console.log('Computer wins!');
+            computerCount+=computerCount+1;
 
-playRound(playerChoice,computerChoice)
-{
+        }
+        if(playerChoice=='papers' && computerChoice=='scissors')
+        {
+            console.log('Computer wins!');
+            computerCount+=computerCount+1;
 
-    if(playerChoice=computerChoice)
-    {
-        console.log('tie!');
+        }
+        if(playerChoice=='scissors' && computerChoice=='papers')
+        {
+            console.log('Player wins!');
+            playerCount+=playerCount+1;
+        }
     }
 
+//initiate counters
+let playerCount=0;
+let computerCount=0;
 
+//Initiate game
+console.log('Welcome to rock, paper, scissors!\nYou are going to play against the computer!');
+let rounds=prompt('How many rounds you want to play?');
 
+for (let i = 0; i <= rounds; i++) 
+{
+    let playerChoice=playerSelection();
+
+    let computerChoice=getComputerChoice();
+
+    playRound(playerChoice,computerChoice);
+
+    
 }
 
 
-   
-// let rounds=prompt('How many rounds you want to play?');
 
-// for (let i = 0; i <= rounds; i++) 
-// {
 
-    
-// }
+
 
 
 
