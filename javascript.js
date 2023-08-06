@@ -20,7 +20,6 @@ else if(random==2)
 {
     return computerAnswer='scissors';
 }
-
 }
 
 //Have player choose an option 
@@ -96,20 +95,14 @@ let computerCount=0;
 
 //Initiate game
 console.log('Welcome to rock, paper, scissors!\nYou are going to play against the computer!');
-let rounds=prompt('How many rounds you want to play?');
+//let rounds=prompt('How many rounds you want to play?');
 
-for (let i = 0; i <= rounds; i++) 
-{
-    let playerChoice=playerSelection();
+//play game
+let playerChoice=playerSelection();
 
     let computerChoice=getComputerChoice();
 
     playRound(playerChoice,computerChoice);
-
-}
-
-
-
 
 
 
