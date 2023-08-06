@@ -1,3 +1,12 @@
+//Program buttons
+
+const rockButton=document.querySelector('#Rock');
+
+rockButton.addEventListener('click', () => {
+    alert('Rock');
+
+});
+/*
 //Initialize variables
 let computerAnswer;
 
@@ -104,6 +113,11 @@ let playerChoice=playerSelection();
 
     playRound(playerChoice,computerChoice);
 
+
+
+
+    
+*/
 
 
 
