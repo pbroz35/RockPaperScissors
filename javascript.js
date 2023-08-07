@@ -1,12 +1,34 @@
+let playerAnswer;
+let playerChoice
 //Program buttons
 
+//Rock Button
 const rockButton=document.querySelector('#Rock');
 
 rockButton.addEventListener('click', () => {
     alert('Rock');
-
+    playerAnswer='Rock';
+    playerSelection(playerAnswer);
 });
-/*
+
+//Paper Button
+const paperButton=document.querySelector('#Paper');
+paperButton.addEventListener('click',()=>{
+    alert('Paper');
+    playerAnswer='Paper'
+    playerSelection(playerAnswer);
+});
+
+//Scissors Button
+const scissorsButton=document.querySelector('#Scissors');
+scissorsButton.addEventListener('click',()=>{
+    alert('Scissors');
+    playerAnswer='Scissors';
+    playerSelection(playerAnswer);
+});
+
+
+
 //Initialize variables
 let computerAnswer;
 
@@ -32,13 +54,8 @@ else if(random==2)
 }
 
 //Have player choose an option 
-function playerSelection()
+function playerSelection(playerAnswer)
 {
-    // let validAnswer=0;
-
-    // while(validAnswer==0) //while-loop to force user to enter valid input
-    // {
-    let playerAnswer=prompt('Rock, paper, scissors?');
     playerAnswer=playerAnswer.toLowerCase();
 
     console.log(playerAnswer);
@@ -107,7 +124,7 @@ console.log('Welcome to rock, paper, scissors!\nYou are going to play against th
 //let rounds=prompt('How many rounds you want to play?');
 
 //play game
-let playerChoice=playerSelection();
+//let playerChoice=playerSelection();
 
     let computerChoice=getComputerChoice();
 
@@ -117,7 +134,7 @@ let playerChoice=playerSelection();
 
 
     
-*/
+
 
 
 
