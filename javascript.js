@@ -75,6 +75,8 @@ function playerSelection(playerAnswer)
 
 function playRound(playerChoice,computerChoice)
     {
+        
+
         if(playerChoice==computerChoice)
         {
             console.log('Tie!');
@@ -82,49 +84,40 @@ function playRound(playerChoice,computerChoice)
         if(playerChoice=='rock' && computerChoice=='paper')
         {
             console.log('Computer wins!');
-            computerCount+=computerCount+1;
+            computerCount=computerCount+1;
 
         }
         if(playerChoice=='paper' && computerChoice=='rock')
         {
             console.log('Player wins!');
-            playerCount+=playerCount+1;
+            playerCount=playerCount+1;
 
         }
         if(playerChoice=='rock' && computerChoice=='scissors')
         {
             console.log('Player wins!');
-            playerCount+=playerCount+1;
+            playerCount=playerCount+1;
 
         }
         if(playerChoice=='scissors' && computerChoice=='rock')
         {
             console.log('Computer wins!');
-            computerCount+=computerCount+1;
+            computerCount=computerCount+1;
 
         }
         if(playerChoice=='papers' && computerChoice=='scissors')
         {
             console.log('Computer wins!');
-            computerCount+=computerCount+1;
+            computerCount=computerCount+1;
 
         }
         if(playerChoice=='scissors' && computerChoice=='papers')
         {
             console.log('Player wins!');
-            playerCount+=playerCount+1;
+            playerCount=playerCount+1;
         }
 
         //List current results
         console.log(`Player: ${playerCount}\nComputer: ${computerCount}`);
 
     }
-
-
-
-    
-
-
-
-
-
