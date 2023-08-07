@@ -1,36 +1,41 @@
+//Initialize variables
 let playerAnswer;
 let playerChoice
+let computerAnswer;
 //Program buttons
-
+let playerCount=0;
+let computerCount=0;
 //Rock Button
 const rockButton=document.querySelector('#Rock');
 
 rockButton.addEventListener('click', () => {
-    alert('Rock');
     playerAnswer='Rock';
-    playerSelection(playerAnswer);
+    playerAnswer=playerSelection(playerAnswer);
+    computerAnswer=getComputerChoice();
+    console.log(`computer picks ${computerAnswer}`);
+    playRound(playerAnswer, computerAnswer);
 });
 
 //Paper Button
 const paperButton=document.querySelector('#Paper');
 paperButton.addEventListener('click',()=>{
-    alert('Paper');
     playerAnswer='Paper'
-    playerSelection(playerAnswer);
+    playerAnswer=playerSelection(playerAnswer);
+    computerAnswer=getComputerChoice();
+    console.log(`computer picks ${computerAnswer}`);
+    playRound(playerAnswer, computerAnswer);
 });
 
 //Scissors Button
 const scissorsButton=document.querySelector('#Scissors');
 scissorsButton.addEventListener('click',()=>{
-    alert('Scissors');
     playerAnswer='Scissors';
-    playerSelection(playerAnswer);
+    playerAnswer=playerSelection(playerAnswer);
+    computerAnswer=getComputerChoice();
+    console.log(`computer picks ${computerAnswer}`);
+    playRound(playerAnswer, computerAnswer);
 });
 
-
-
-//Initialize variables
-let computerAnswer;
 
 //Generate computer answer
 function getComputerChoice()
@@ -114,22 +119,6 @@ function playRound(playerChoice,computerChoice)
         console.log(`Player: ${playerCount}\nComputer: ${computerCount}`);
 
     }
-
-//initiate counters
-let playerCount=0;
-let computerCount=0;
-
-//Initiate game
-console.log('Welcome to rock, paper, scissors!\nYou are going to play against the computer!');
-//let rounds=prompt('How many rounds you want to play?');
-
-//play game
-//let playerChoice=playerSelection();
-
-    let computerChoice=getComputerChoice();
-
-    playRound(playerChoice,computerChoice);
-
 
 
 
