@@ -26,3 +26,14 @@ button{
     color: black;
     border-radius: 10px;
 }
+
+.result-container{
+display: flex;
+justify-content: center;
+margin-top: 50px;
+color: white;
+border: 5px solid white;
+padding: 20px;
+font-weight: bolder;
+font-size: x-large;
+}

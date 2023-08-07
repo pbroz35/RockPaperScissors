@@ -2,12 +2,16 @@
 let playerAnswer;
 let playerChoice
 let computerAnswer;
-//Program buttons
 let playerCount=0;
 let computerCount=0;
+
+//
+rpsResults=document.createElement('div');
+rpsResults.classList.add('result-container');
+//Program buttons
+
 //Rock Button
 const rockButton=document.querySelector('#Rock');
-
 rockButton.addEventListener('click', () => {
     playerAnswer='Rock';
     playerAnswer=playerSelection(playerAnswer);
@@ -70,13 +74,10 @@ function playerSelection(playerAnswer)
         console.log(`You've selected ${playerAnswer}!`);
         return playerAnswer;
     }
-
 }
 
 function playRound(playerChoice,computerChoice)
     {
-        
-
         if(playerChoice==computerChoice)
         {
             console.log('Tie!');
@@ -117,7 +118,8 @@ function playRound(playerChoice,computerChoice)
             playerCount=playerCount+1;
         }
 
-        //List current results
-        console.log(`Player: ${playerCount}\nComputer: ${computerCount}`);
-
+        
+        rpsResults.textContent=`Player: ${playerCount}\nComputer: ${computerCount}`;
+        document.body.appendChild(rpsResults);
+        
     }
